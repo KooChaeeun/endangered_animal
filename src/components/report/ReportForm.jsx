@@ -37,7 +37,7 @@ const ReportForm = ({ onAdd }) => {
         onAdd({
             id: Date.now(),
             ...formData,
-            image: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=200', // 임시 곰 이미지
+            // image: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=200', // 임시 이미지
         });
 
         // 폼 초기화
@@ -47,7 +47,6 @@ const ReportForm = ({ onAdd }) => {
     return (
         <Box sx={{ borderTop: '2px solid #333', pt: 2 }}>
             <Grid container spacing={2} alignItems="center">
-                {/* 행 단위로 구성 (라벨: 3, 입력창: 9) */}
                 <TextField
                     required
                     fullWidth

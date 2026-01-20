@@ -5,6 +5,7 @@ const HeroSection = () => {
     return (
         <Box
             sx={{
+                width: '100%',
                 height: '1200px',
                 backgroundImage: "url('/images/mv01.jpg')",
                 backgroundSize: 'cover',

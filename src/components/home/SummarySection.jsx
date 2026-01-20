@@ -1,11 +1,5 @@
 import { Box, Grid, Typography } from '@mui/material';
-
-const data = [
-    { label: '총 멸종위기 종 수', value: '282종', img: '/images/ico_lion.png' },
-    { label: 'Ⅰ급 멸종위기종', value: '68종', img: '/images/ico_bug.png' },
-    { label: 'ⅠⅠ급 멸종위기종', value: '214종', img: '/images/ico_cat.png' },
-    { label: '분류군 수', value: '6종', img: '/images/ico_fish.png' },
-];
+import summaryData from '../../assets/api/summary';
 
 const SummarySection = () => {
     return (
@@ -34,14 +28,23 @@ const SummarySection = () => {
                 justifyContent="center"
                 sx={{ maxWidth: '1440px', mx: 'auto', width: '100%' }}
             >
-                {data.map((item) => (
+                {summaryData.map((item) => (
                     <Grid
                         item
                         key={item.label}
                         px={12}
-                        sx={{ textAlign: 'center', borderTop: '2px solid #0DC271' }}
+                        sx={{
+                            textAlign: 'center',
+                            borderTop: '2px solid #0DC271',
+                        }}
                     >
-                        <Box component="img" my={3} src={item.img} alt={item.label} />
+                        <Box
+                            component="img"
+                            my={3}
+                            src={item.img}
+                            alt={item.label}
+                            sx={{ width: '80%' }}
+                        />
                         <Typography variant="h5" fontWeight="bold">
                             {item.value}
                         </Typography>

@@ -14,7 +14,7 @@ import {
 const ReportList = ({ items, onDelete }) => {
     const [selected, setSelected] = useState([]);
 
-    // 체크박스 핸들러
+    // 체크박스
     const handleSelect = (id) => {
         setSelected((prev) => (prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]));
     };
@@ -43,7 +43,7 @@ const ReportList = ({ items, onDelete }) => {
                     <TableHead sx={{ bgcolor: '#fbfbfb' }}>
                         <TableRow>
                             <TableCell padding="checkbox"></TableCell>
-                            <TableCell align="center">첨부파일</TableCell>
+                            {/* <TableCell align="center">첨부파일</TableCell> */}
                             <TableCell align="center">발견장소</TableCell>
                             <TableCell align="center">발견일시</TableCell>
                             <TableCell align="center">발견당시상황</TableCell>
@@ -66,13 +66,13 @@ const ReportList = ({ items, onDelete }) => {
                                             onChange={() => handleSelect(row.id)}
                                         />
                                     </TableCell>
-                                    <TableCell align="center">
+                                    {/* <TableCell align="center">
                                         <img
                                             src={row.image}
                                             alt="발견이미지"
                                             style={{ width: 100, borderRadius: 8 }}
                                         />
-                                    </TableCell>
+                                    </TableCell> */}
                                     <TableCell align="center">{row.location}</TableCell>
                                     <TableCell align="center">
                                         {row.date}

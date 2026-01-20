@@ -1,4 +1,4 @@
-import { Card, CardMedia, CardContent, Typography, Chip } from '@mui/material';
+/* import { Card, CardMedia, CardContent, Typography, Chip } from '@mui/material';
 
 const AnimalCard = () => {
     return (
@@ -16,3 +16,4 @@ const AnimalCard = () => {
 };
 
 export default AnimalCard;
+ */
